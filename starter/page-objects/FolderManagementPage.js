@@ -30,7 +30,7 @@ var FolderManagementPage = function () {
     expect(infotextarea.getText()).toContain(errortext);
   };
 
-  this.clickCancelButton = function () {
+  this.clickFolderCreateCancelButton = function () {
     foldercancelbutton.click();
   };
 

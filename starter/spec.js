@@ -8,10 +8,11 @@ describe('ADF Demo App', function () {
   // Protractor uses Jasmine framework by default
   it('sign in to folder management', function () {
     login.getSettingsPage();
-    login.selectDropdownOption('EMC');
+    login.selectProviderDropdownOption('EMC');
     login.clickSettingsSubmit();
     login.setLoginId('guest@example.com');
     login.setPassword('Password');
+    // These two steps are to demonstrate more generic page object functions
     utility.clickButton('.adf-login-button-label');
     utility.areaContains('h2', 'Angular components for Alfresco');
   });
@@ -22,7 +23,7 @@ describe('ADF Demo App', function () {
     files.checkNewFolderCreated('jaffamonkey');
     files.createNewFolder('jaffamonkey');
     files.checkDuplicateFolderMessage();
-    files.clickCancelButton();
+    files.clickFolderCreateCancelButton();
     files.deleteAFolderWithCheck('jaffamonkey');
   });
 });
