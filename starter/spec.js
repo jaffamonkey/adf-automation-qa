@@ -8,7 +8,7 @@ describe('ADF Demo App', function () {
   // Protractor uses Jasmine framework by default
   it('sign in to folder management', function () {
     login.getSettingsPage();
-    login.selectProviderDropdownOption('EMC');
+    login.selectEMCProvider();
     login.clickSettingsSubmit();
     login.setLoginId('guest@example.com');
     login.setPassword('Password');
