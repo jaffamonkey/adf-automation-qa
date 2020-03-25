@@ -9,5 +9,4 @@
 
 ## Explanation
 
-I followed a page-objects approach, which usually smooths process of creating tests ovet time. 
-
+I followed a page-objects approach, which usually smooths process of creating tests over time. 
