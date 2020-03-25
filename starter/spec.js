@@ -1,18 +1,17 @@
 // spec.js
 var login = require('./page-objects/LoginPage');
 var files = require('./page-objects/FolderManagementPage');
-var utility = require('./page-objects/Utility').default;
+var utility = require('./page-objects/Utility');
 
 describe('ADF Demo App', function () {
 
   // Protractor uses Jasmine framework by default
   it('sign in to folder management', function () {
     login.getSettingsPage();
-    login.selectEMCProvider();
+    login.selectProviderEMC();
     login.clickSettingsSubmit();
     login.setLoginId('guest@example.com');
     login.setPassword('Password');
-    // These two steps are to demonstrate more generic page object functions
     utility.clickButton('.adf-login-button-label');
     utility.areaContains('h2', 'Angular components for Alfresco');
   });
@@ -23,7 +22,7 @@ describe('ADF Demo App', function () {
     files.checkNewFolderCreated('jaffamonkey');
     files.createNewFolder('jaffamonkey');
     files.checkDuplicateFolderMessage();
-    files.clickFolderCreateCancelButton();
+    files.clickCancelButton();
     files.deleteAFolderWithCheck('jaffamonkey');
   });
 });

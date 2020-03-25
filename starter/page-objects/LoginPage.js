@@ -10,7 +10,7 @@ var LoginPage = function () {
     browser.get('http://qaexercise.envalfresco.com/settings');
   };
 
-  this.selectEMCProvider = function () {
+  this.selectProviderEMC = function () {
     element(by.id('adf-provider-selector')).click();
     element(by.id('mat-option-1')).click();
   };
