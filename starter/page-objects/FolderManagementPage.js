@@ -1,14 +1,12 @@
 
-/* global element, by, protractor, browser, $*/
+// Page objects for the folder management page
+
 var FolderManagementPage = function () {
 
   var newfolder = element(by.css('button[data-automation-id="create-new-folder"]'));
   var foldercreatebutton = element(by.id('adf-folder-create-button'));
   var foldercancelbutton = element(by.id('adf-folder-cancel-button'));
-  // var folderdeletebutton = element(by.css('button[title="Delete"]'));
   var folderdeletebutton = element(by.css('button[data-automation-id="DOCUMENT_LIST.ACTIONS.FOLDER.DELETE"]'));
-
-  
   var folderfield = element(by.id('adf-folder-name-input'));
   var folderlist = element.all(by.css('.adf-datatable-body')).get(1);
   var infotextarea = element(by.css('body'));

@@ -1,5 +1,6 @@
 
-/* global element, by, protractor, browser, $*/
+// Page objects for the login/settings page
+
 var LoginPage = function () {
 
   var loginid = element(by.id('username'));

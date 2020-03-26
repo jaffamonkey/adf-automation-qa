@@ -1,4 +1,5 @@
-/* global element, expect, by, protractor, browser, $*/
+// Page objects for more generic functions
+
 var Utility = function () {
 
   this.areaContains = function (selector, text) {
