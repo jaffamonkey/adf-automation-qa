@@ -5,7 +5,10 @@ var FolderManagementPage = function () {
   var newfolder = element(by.css('button[data-automation-id="create-new-folder"]'));
   var foldercreatebutton = element(by.id('adf-folder-create-button'));
   var foldercancelbutton = element(by.id('adf-folder-cancel-button'));
-  var folderdeletebutton = element(by.css('button[title="Delete"]'));
+  // var folderdeletebutton = element(by.css('button[title="Delete"]'));
+  var folderdeletebutton = element(by.css('button[data-automation-id="DOCUMENT_LIST.ACTIONS.FOLDER.DELETE"]'));
+
+  
   var folderfield = element(by.id('adf-folder-name-input'));
   var folderlist = element.all(by.css('.adf-datatable-body')).get(1);
   var infotextarea = element(by.css('body'));
@@ -35,7 +38,9 @@ var FolderManagementPage = function () {
   };
 
   this.deleteAFolderWithCheck = function (foldername) {
-    element.all(by.css('div[data-automation-id="' + foldername + '"]')).get(1).click();
+    element(by.css('div[data-automation-id="auto_id_createdAt"')).click();
+    element(by.css('div[data-automation-id="auto_id_createdAt"')).click();
+    element(by.id('action_menu_right_0')).click();
     folderdeletebutton.click();
     expect(infotextarea.getText()).toContain(deletionconfirmtext);
   };
