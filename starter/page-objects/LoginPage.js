@@ -5,6 +5,9 @@ var LoginPage = function () {
 
   var loginid = element(by.id('username'));
   var loginpassword = element(by.id('password'));
+  var providerselector = element(by.id('adf-provider-selector'));
+  var matoption = element(by.id('mat-option-1'));
+  var submitbutton = element(by.id('host-button'));
 
   // using async, available with ES6
   this.getSettingsPage = function () {
@@ -12,8 +15,8 @@ var LoginPage = function () {
   };
 
   this.selectProviderEMC = function () {
-    element(by.id('adf-provider-selector')).click();
-    element(by.id('mat-option-1')).click();
+    providerselector.click();
+    matoption.click();
   };
 
   this.setLoginId = function (login) {
@@ -25,7 +28,7 @@ var LoginPage = function () {
   };
 
   this.clickSettingsSubmit = function () {
-    element(by.id('host-button')).click();
+    submitbutton.click();
   };
 };
 module.exports = new LoginPage();
